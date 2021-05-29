@@ -20,6 +20,9 @@ app.get('/add_post',pageController.addPost)
 app.post('/cpost',postController.createPost)
 app.get('/about',pageController.about)
 app.get('/posts/:id',pageController.showPost)
+app.get('/delete/:id',postController.deletePost)
+app.get('/edit/:id',pageController.editPage)
+app.post('/update/:id',postController.updatePost)
 
 app.get('*',(req, res)=>{
   res.status(404)

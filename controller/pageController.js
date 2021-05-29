@@ -5,7 +5,6 @@ exports.showPost=async(req, res)=>{
     res.render('post',{
         post,
       })
-       console.log(post)
 }
 exports.about= (req, res) => {
     res.render('about')
@@ -13,4 +12,10 @@ exports.about= (req, res) => {
 
   exports.addPost= (req, res) => {
     res.render('add_post')
+  }
+  exports.editPage= async(req, res)=>{
+    const post= await Post.findById(req.params.id)
+    res.render('edit',{
+      post,
+    })
   }

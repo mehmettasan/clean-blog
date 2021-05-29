@@ -17,6 +17,10 @@
               <a href="#">Start Bootstrap</a>
               on <%= post.dateCreated.getDate() %>/<%= post.dateCreated.getMonth()+1 %>/<%= post.dateCreated.getFullYear() %></span>
           </div>
+          <div>
+            <a href="/edit/<%= post.id%>" class="btn btn-primary"> Update Post </a>
+            <a href="/delete/<%= post.id%>" class="btn btn-warning"> Delete Post </a>
+          </div>
         </div>
       </div>
     </div>
